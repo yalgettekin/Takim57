@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'Screens/OnboardingScreen.dart';
-void main() {
+import 'package:flutter_application_1/Screens/BottomNavigationController.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+void main() async {
+  await Hive.initFlutter();
+  await Hive.openBox('');
   runApp(const SurveyApp());
 }
 
@@ -12,7 +15,7 @@ class SurveyApp extends StatelessWidget {
 
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnboardingScreen(),
+      home: BottomNavigationController(),
     );
   }
 }
