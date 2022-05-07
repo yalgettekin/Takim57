@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screens/OnboardingScreen.dart';
 import 'ProfileTab.dart';
 import 'BoardTab.dart';
-import 'LeaderboardTab.dart';
+import 'SurveyHistoryTab.dart';
 import 'package:hive/hive.dart';
 
 class BottomNavigationController extends StatefulWidget {
@@ -20,7 +20,7 @@ class _BottomNavigationControllerState
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     BoardTab(),
-    LeaderboardTab(),
+    SurveyHistoryTab(),
     ProfileTab()
   ];
 
@@ -48,8 +48,8 @@ class _BottomNavigationControllerState
                   label: 'Pano',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.leaderboard),
-                  label: 'Skorbord',
+                  icon: Icon(Icons.history),
+                  label: 'Anket Geçmişi',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.people),

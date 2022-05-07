@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 
-class LeaderboardTab extends StatelessWidget {
-  const LeaderboardTab({Key? key}) : super(key: key);
+class SurveyHistoryTab extends StatelessWidget {
+  const SurveyHistoryTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => SafeArea(
     child: Container(
-      child: const Text("Skorbord ekrani"),
+      child: const Text("Anket geçmişi ekranı"),
     ),
   );
 }
