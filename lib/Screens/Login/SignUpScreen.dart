@@ -13,13 +13,15 @@ class SignUpScreen extends StatelessWidget {
   const SignUpScreen({Key? key}) : super(key: key);
 
   @override
-  @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          SizedBox(height: size.height * 0.01),
+          Image.asset('assets/logo.png', height: size.height * 0.20),
+          SizedBox(height: size.height * 0.01),
           RoundedInputField(
             hintText: kUsernameText,
             onChanged: (value) {},

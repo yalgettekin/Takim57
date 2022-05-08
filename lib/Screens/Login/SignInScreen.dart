@@ -19,7 +19,9 @@ class SignInScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: size.height * 0.03),
+            SizedBox(height: size.height * 0.01),
+            Image.asset('assets/logo.png', height: size.height * 0.20),
+            SizedBox(height: size.height * 0.01),
             RoundedInputField(
               hintText: kUsernameText,
               onChanged: (value) {},
