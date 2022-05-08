@@ -7,3 +7,5 @@ const kPasswordText = "Şifre";
 const kPasswordAgainText = "Şifreyi tekrar giriniz";
 const kContinueWithoutSignInText = "Giriş yapmadan devam et";
 const kContinueWithoutSignUpText = "Kayıt olmadan devam et";
+const kSignInWithGoogleText = "Google ile Giriş Yap";
+const kSignUpWithGoogleText = "Google ile Kayıt Ol";

@@ -1,13 +1,13 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screens/BoardTab.dart';
 import '../../Constants/TextStyleConstant.dart';
 import '../../Constants/StringConstant.dart';
 import '../../Components/Login/RoundedInputField.dart';
 import '../../Components/Login/RoundedButton.dart';
 import '../../Components/Login/RoundedPasswordField.dart';
 import '../BottomNavigationController.dart';
+import '../../Components/Login/GoogleLoginButton.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -40,10 +40,7 @@ class SignUpScreen extends StatelessWidget {
             onPressed: () {},
           ),
           SizedBox(height: size.height * 0.01),
-          // GoogleLoginButton(
-          //       iconSrc: "assets/icons/facebook.svg",
-          //       press: () {},
-          // ),
+          const GoogleLoginButton(text: kSignUpWithGoogleText),
           TextButton(
               onPressed: () {
                 goToHomeScreen(context);

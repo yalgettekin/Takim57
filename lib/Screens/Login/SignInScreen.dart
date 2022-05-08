@@ -7,6 +7,7 @@ import '../../Components/Login/RoundedInputField.dart';
 import '../../Components/Login/RoundedPasswordField.dart';
 import '../../Components/Login/RoundedButton.dart';
 import '../BottomNavigationController.dart';
+import '../../Components/Login/GoogleLoginButton.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -33,10 +34,8 @@ class SignInScreen extends StatelessWidget {
               text: kSignInText,
               onPressed: () {},
             ),
-            // GoogleLoginButton(
-            //       iconSrc: "assets/icons/facebook.svg",
-            //       press: () {},
-            // ),
+            SizedBox(height: size.height * 0.01),
+            const GoogleLoginButton(text: kSignInWithGoogleText),
             TextButton(
               onPressed: () {
                 goToHomeScreen(context);
