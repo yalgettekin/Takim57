@@ -1,7 +1,8 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screens/OnboardingScreen.dart';
+import '../Constants/StringConstant.dart';
+import '../Screens/OnboardingScreen.dart';
 import 'ProfileTab.dart';
 import 'BoardTab.dart';
 import 'SurveyHistoryTab.dart';
@@ -45,15 +46,15 @@ class _BottomNavigationControllerState
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
-                  label: 'Pano',
+                  label: kBoardScreenText,
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.history),
-                  label: 'Anket Geçmişi',
+                  label: kSurveyHistoryText,
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.people),
-                  label: 'Profil',
+                  label: kProfileText,
                 ),
               ],
               currentIndex: _selectedIndex,
