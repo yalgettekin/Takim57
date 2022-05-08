@@ -78,15 +78,19 @@ ASANA’da Product backlog item'lara tıklandığında hikayeler, puanları, zam
 
 **Ürün Durumu Ekran Görüntüleri:**
 
-![1_ 2022-05-07 at 15 10 55](https://user-images.githubusercontent.com/104317144/167295481-06cae904-451d-4b48-9154-92a6f0722231.jpeg)
+![onboardingP_1](https://user-images.githubusercontent.com/104317144/167296904-f321ee17-df91-4c80-848f-2677dc741191.jpeg)
 
-![2_2022-05-07 at 15 10 56](https://user-images.githubusercontent.com/104317144/167295488-4d99a61c-bcf5-4990-9295-984e68f6fbc8.jpeg)
+![onboardingP_2](https://user-images.githubusercontent.com/104317144/167296908-da6c567f-cc58-4584-8e67-d64eda6209fa.jpeg)
 
-![3_ 2022-05-07 at 15 10 57](https://user-images.githubusercontent.com/104317144/167295494-6c8ee1e7-cf29-46f6-bc86-a66b82484680.jpeg)
+![onboardingP_3](https://user-images.githubusercontent.com/104317144/167296909-c70ef504-810d-44cd-ae0c-b57816e729e3.jpeg)
 
-![4_ 2022-05-07 at 15 10 57 (1)](https://user-images.githubusercontent.com/104317144/167295498-92588553-db0b-473b-8faf-bc9a06da677a.jpeg)
+![onboardingP_4](https://user-images.githubusercontent.com/104317144/167296910-41a3ac23-60be-48f3-b143-99b00c90c4b7.jpeg)
 
-![5_ 2022-05-07 at 19 02 34](https://user-images.githubusercontent.com/104317144/167295551-ad51ae34-75eb-421a-8d87-08e95e7daeba.jpeg)
+![anket_panosu](https://user-images.githubusercontent.com/104317144/167296922-184a090a-febf-4e8e-8b6d-a1e9e6603c1e.jpeg)
+
+
+
+
 
 **Sprint Review:**
 
