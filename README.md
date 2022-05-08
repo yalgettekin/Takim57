@@ -22,7 +22,7 @@ Survey Land
 
 **Ürün Açıklaması**
 
-"Survey Land" simli uygulamamız anketlerin ve araştırmaların doğru kitleye kolaylıkla ulaşmasını sağlamak için tasarlanmıştır. Kullanıcılar uygulamayı kullanarak ilgi alanlarına uygun anketleri doldurabilir, kazandıkları puanları harcayarak da seçtikleri kitleye uygun anketler yayınlayabilir.
+"Survey Land" isimli uygulamamız anketlerin ve araştırmaların doğru kitleye kolaylıkla ulaşmasını sağlamak için tasarlanmıştır. Kullanıcılar uygulamayı kullanarak ilgi alanlarına uygun anketleri doldurabilir, kazandıkları puanları harcayarak da seçtikleri kitleye uygun anketler yayınlayabilir.
 
 **Ürün Özellikleri**
 
