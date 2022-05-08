@@ -50,7 +50,6 @@ Survey Land
 
 ASANA https://app.asana.com/0/1202171107125904/board
 
-DRİVE https://docs.google.com/spreadsheets/d/1d6ZFMm_cjp45rDGlhCXtkUMovtTGvbkCu6dgM90VfKM/edit?usp=sharing
 
 ******Sprint 1******
 
