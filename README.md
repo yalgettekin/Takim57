@@ -95,7 +95,7 @@ ASANA’da Product backlog item'lara tıklandığında hikayeler, puanları, zam
 **Sprint Review:**
 
 İlk sprint için belirlenen backlog hedeflerinden App Design, Onboarding Page ve Anket Panosu taskları değerlendirildi. Bu tasklardan App Design ve Onboarding page tamamlanmıştır.  Anket Panosunda sadece “Anket adı, açıklaması, kategori alanlarının olduğu genel görünüm” oluşturulmuş olup task tamamen tamamlannanıştır.Sprint sonu değerlendirmesinde Anket Panosunun büyük bir story olması sebebiyle  subtasklara bölünmesi kararı alınmıştır.   Aynı durum Login Screen ve Leaderbord İçin Veri Çekme storyleri için de tespit edilmiş olup subtaskları oluşturulmuştur.  
-Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir.  Sprint içinde tamamlanması tahmin edilen 35 puandan 21’I tammalanmıştır.
+Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir.  Sprint içinde tamamlanması tahmin edilen 35 puandan 23’ü tammalanmıştır.
 **Sprint Review katılımcıları:** Fatma Betül SOFUOĞLU, Seray SAN, Uğur Ulaş GÖKTAŞ, Naile YALGETTEKİN, Yusuf TÜRKAY
 
 **Sprint Retrospective:**
