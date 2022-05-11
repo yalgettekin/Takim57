@@ -9,3 +9,5 @@ const TextStyle kGoogleLoginTextStyle =
     TextStyle(color: kBlack, fontSize: 20.0, fontWeight: FontWeight.w600);
 const TextStyle kContinueWithoutLoginTextStyle =
     TextStyle(color: kClaretRed, fontSize: 20.0, fontWeight: FontWeight.w400);
+const TextStyle kSignInWelcomeTextStyle =
+    TextStyle(color: kBlack, fontSize: 16.0, fontWeight: FontWeight.w700);

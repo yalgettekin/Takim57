@@ -2,6 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import '../../Constants/StringConstant.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import '../../Constants/TextStyleConstant.dart';
 import '../../Screens/Login/LoginTabBarController.dart';
@@ -23,31 +24,34 @@ class _GoogleLoginButtonState extends State<GoogleLoginButton> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-        margin: const EdgeInsets.symmetric(vertical: 10),
-        width: size.width * 0.8,
-        child: StreamBuilder<User?>(
-          stream: FirebaseAuth.instance.authStateChanges(),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              return Center(
-                  child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CircleAvatar(
-                    backgroundImage:
-                        NetworkImage(snapshot.data!.photoURL.toString()),
-                  ),
-                  Text(snapshot.data!.displayName.toString()),
-                ],
-              ));
-            }
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const CircularProgressIndicator();
-            }
-            return newOutlinedButton();
-          },
-        ),
-        );
+      margin: const EdgeInsets.symmetric(vertical: 10),
+      width: size.width * 0.8,
+      child: StreamBuilder<User?>(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return Center(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(kWelcomeText, style: kSignInWelcomeTextStyle),
+                const SizedBox(height: 10),
+                CircleAvatar(
+                  backgroundImage:
+                      NetworkImage(snapshot.data!.photoURL.toString()),
+                ),
+                const SizedBox(height: 10),
+                Text(snapshot.data!.displayName.toString(), style: kSignInWelcomeTextStyle,),
+              ],
+            ));
+          }
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const CircularProgressIndicator();
+          }
+          return newOutlinedButton();
+        },
+      ),
+    );
   }
 
   Widget newOutlinedButton() {
@@ -81,5 +85,4 @@ class _GoogleLoginButtonState extends State<GoogleLoginButton> {
 }
 
 void goToHomeScreen(context) => Navigator.of(context).pushReplacement(
-         MaterialPageRoute(builder: (_) => const LoginTabBarController())
-       );
+    MaterialPageRoute(builder: (_) => const LoginTabBarController()));
