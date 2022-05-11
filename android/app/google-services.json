@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "82804387677",
+    "project_id": "surveyland-305cb",
+    "storage_bucket": "surveyland-305cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82804387677:android:91fead65161285df2982b4",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82804387677-9957kdb2bns418bvib6d3lg8p9eqoe3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbEKQeAhSOEkryu7l_3A7oDAvNu9k26Kc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82804387677-9957kdb2bns418bvib6d3lg8p9eqoe3n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

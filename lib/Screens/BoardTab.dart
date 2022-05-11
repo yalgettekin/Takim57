@@ -1,10 +1,15 @@
-// ignore_for_file: file_names
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class BoardTab extends StatelessWidget {
+class BoardTab extends StatefulWidget {
   const BoardTab({Key? key}) : super(key: key);
 
+  @override
+  State<BoardTab> createState() => _BoardTabState();
+
+}
+
+class _BoardTabState extends State<BoardTab> {
   @override
   Widget build(BuildContext context) => SafeArea(
           child: Container(

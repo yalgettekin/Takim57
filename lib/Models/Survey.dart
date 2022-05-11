@@ -2,26 +2,23 @@ import 'package:flutter/material.dart';
 
 //Anket sınıfında anketin ismi, açıklaması, kategorisi ve linki bulunuyor
 class Survey {
-  final String name, description, category, link;
+  String name, description, category, link;
 
-  Survey({
-    required this.name,
-    required this.description,
-    required this.category,
-    required this.link,
-  });
+  Survey(this.name,
+      this.description,
+      this.category,
+      this.link,);
 
-  /*
-  List<Survey> surveys = List.generate(
-    demo_survey.length,
-    (index) => Survey(
-        name: demo_survey[index]['name'],
-        description: demo_survey[index]['description'],
-        category: demo_survey[index]['category'],
-        link: demo_survey[index]['link']),
-  );
+  Survey.fromMap(Map<String, dynamic> map)
+      :this(map['name'], map['description'], map['category'],
+      map['link']);
 
-  //Örnek anket girdileri
-  //Bu kısım daha sonra firebase'e bağlanacak */
-
+  Map<String, dynamic> toMap() {
+    return {
+      'name':'name',
+      'description':description,
+      'category':category,
+      'link':link,
+    };
+  }
 }
