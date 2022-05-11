@@ -1,43 +1,74 @@
 // ignore_for_file: file_names
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import '../../Constants/TextStyleConstant.dart';
+import '../../Screens/Login/LoginTabBarController.dart';
 
-class GoogleLoginButton extends StatelessWidget {
+class GoogleLoginButton extends StatefulWidget {
   final String text;
-  final VoidCallback? onPressed;
   const GoogleLoginButton({
     Key? key,
     required this.text,
-    this.onPressed,
   }) : super(key: key);
 
+  @override
+  State<GoogleLoginButton> createState() => _GoogleLoginButtonState();
+}
+
+class _GoogleLoginButtonState extends State<GoogleLoginButton> {
+  GoogleSignIn _googleSignIn = GoogleSignIn();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 10),
-      width: size.width * 0.8,
-      child: newOutlinedButton(),
-    );
+        margin: const EdgeInsets.symmetric(vertical: 10),
+        width: size.width * 0.8,
+        child: StreamBuilder<User?>(
+          stream: FirebaseAuth.instance.authStateChanges(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              return Center(
+                  child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                    backgroundImage:
+                        NetworkImage(snapshot.data!.photoURL.toString()),
+                  ),
+                  Text(snapshot.data!.displayName.toString()),
+                ],
+              ));
+            }
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const CircularProgressIndicator();
+            }
+            return newOutlinedButton();
+          },
+        ),
+        );
   }
 
   Widget newOutlinedButton() {
     return OutlinedButton(
-      child: Opacity(
-        opacity: 1,
-        child: Row(
-          children: [
-            Image.asset('assets/google_icon.png', width: 30),
-            const SizedBox(width: 25),
-            Text(
-              text,
-              style: kGoogleLoginTextStyle,
-            ),
-          ],
-        ),
+      child: Row(
+        children: [
+          Image.asset('assets/google_icon.png', width: 30),
+          const SizedBox(width: 25),
+          Text(
+            widget.text,
+            style: kGoogleLoginTextStyle,
+          ),
+        ],
       ),
-      onPressed: onPressed,
+      onPressed: () async {
+        final newUser = await _googleSignIn.signIn();
+        final googleAuth = await newUser!.authentication;
+        final credentials = GoogleAuthProvider.credential(
+            accessToken: googleAuth.accessToken, idToken: googleAuth.idToken);
+        await FirebaseAuth.instance.signInWithCredential(credentials);
+      },
       style: OutlinedButton.styleFrom(
           side: const BorderSide(width: 3.0),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -48,3 +79,7 @@ class GoogleLoginButton extends StatelessWidget {
     );
   }
 }
+
+void goToHomeScreen(context) => Navigator.of(context).pushReplacement(
+         MaterialPageRoute(builder: (_) => const LoginTabBarController())
+       );
