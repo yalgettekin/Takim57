@@ -2,6 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screens/BottomNavigationController.dart';
 import '../../Constants/StringConstant.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import '../../Constants/TextStyleConstant.dart';
@@ -41,7 +42,20 @@ class _GoogleLoginButtonState extends State<GoogleLoginButton> {
                       NetworkImage(snapshot.data!.photoURL.toString()),
                 ),
                 const SizedBox(height: 10),
-                Text(snapshot.data!.displayName.toString(), style: kSignInWelcomeTextStyle,),
+                Text(
+                  snapshot.data!.displayName.toString(),
+                  style: kSignInWelcomeTextStyle,
+                ),
+                const SizedBox(height: 10),
+                GestureDetector(
+                  onTap: () {
+                    goToHomeScreen(context);
+                  },
+                  child: const Text(
+                    'Ana Sayfaya Git',
+                    style: kSignInExitTextStyle,
+                  ),
+                ),
               ],
             ));
           }
@@ -85,4 +99,4 @@ class _GoogleLoginButtonState extends State<GoogleLoginButton> {
 }
 
 void goToHomeScreen(context) => Navigator.of(context).pushReplacement(
-    MaterialPageRoute(builder: (_) => const LoginTabBarController()));
+    MaterialPageRoute(builder: (_) => const BottomNavigationController()));
