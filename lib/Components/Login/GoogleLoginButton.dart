@@ -6,7 +6,6 @@ import 'package:flutter_application_1/Screens/BottomNavigationController.dart';
 import '../../Constants/StringConstant.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import '../../Constants/TextStyleConstant.dart';
-import '../../Screens/Login/LoginTabBarController.dart';
 
 class GoogleLoginButton extends StatefulWidget {
   final String text;
@@ -53,7 +52,18 @@ class _GoogleLoginButtonState extends State<GoogleLoginButton> {
                   },
                   child: const Text(
                     'Ana Sayfaya Git',
-                    style: kSignInExitTextStyle,
+                    style: kSignInHomeScreenTextStyle,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                GestureDetector(
+                  onTap: () async {
+                    await _googleSignIn.signOut();
+                    await FirebaseAuth.instance.signOut();
+                  },
+                  child: const Text(
+                    'Çıkış',
+                    style: kSignOutTextStyle,
                   ),
                 ),
               ],
