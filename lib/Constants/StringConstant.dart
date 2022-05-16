@@ -23,7 +23,7 @@ const kProfileText = "Profil";
 
 const kSignInText = "Giriş yap";
 const kSignUpText = "Kayıt ol";
-const kUsernameText = "Kullanıcı Adı";
+const kEmailText = "E-mail";
 const kPasswordText = "Şifre";
 const kPasswordAgainText = "Şifreyi tekrar giriniz";
 const kContinueWithoutSignInText = "Giriş yapmadan devam et";
