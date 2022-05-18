@@ -1,12 +1,24 @@
 // ignore_for_file: file_names
 
+import 'dart:ffi';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../../Screens/Login/LoginTabBarController.dart';
 import '../Constants/StringConstant.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
-class ProfileTab extends StatelessWidget {
+class ProfileTab extends StatefulWidget {
   const ProfileTab({Key? key}) : super(key: key);
+
+  @override
+  State<ProfileTab> createState() => _ProfileTabState();
+}
+
+class _ProfileTabState extends State<ProfileTab> {
+  GoogleSignIn _googleSignIn = GoogleSignIn();
+  String signinText = "";
 
   @override
   Widget build(BuildContext context) => SafeArea(
@@ -14,6 +26,11 @@ class ProfileTab extends StatelessWidget {
           child: StreamBuilder<User?>(
             stream: FirebaseAuth.instance.authStateChanges(),
             builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                signinText = kExitText;
+              } else {
+                signinText = kSignUpText;
+              }
               return Scaffold(
                 appBar: AppBar(
                   backgroundColor: const Color(0xffc4c4c4),
@@ -33,12 +50,15 @@ class ProfileTab extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(15.0),
-                          child: Icon(
-                            CupertinoIcons.profile_circled,
-                            size: 55,
-                          ),
+                          child: snapshot.hasData
+                              ? CircleAvatar(
+                                  backgroundImage: NetworkImage(
+                                    snapshot.data!.photoURL.toString(),
+                                  ),
+                                )
+                              : const Icon(CupertinoIcons.profile_circled,
+                                  size: 55),
                         ),
-                        // Seray San
                         Text(snapshot.data?.displayName ?? kUnknown,
                             style: const TextStyle(
                                 color: const Color(0xff000000),
@@ -68,31 +88,41 @@ class ProfileTab extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 135),
-                      child: Container(
-                          child: Align(
-                            child: Text("Kayıt ol ",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontFamily: 'SourceSansPro',
-                                  color: Color(0xff000000),
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w400,
-                                  fontStyle: FontStyle.normal,
-                                )),
-                          ),
-                          width: 135,
-                          height: 33,
-                          decoration: new BoxDecoration(
-                            color: Color(0xffffeeee),
-                            borderRadius: BorderRadius.circular(25),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Color(0x3f000000),
-                                  offset: Offset(0, 4),
-                                  blurRadius: 5,
-                                  spreadRadius: 0)
-                            ],
-                          )),
+                      child: GestureDetector(
+                        onTap: () async {
+                          if (snapshot.hasData) {
+                            _googleSignIn.signOut();
+                            FirebaseAuth.instance.signOut();
+                          } else {
+                            goToLoginScreen(context);
+                          }
+                        },
+                        child: Container(
+                            child: Align(
+                              child: Text(signinText,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontFamily: 'SourceSansPro',
+                                    color: Color(0xff000000),
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w400,
+                                    fontStyle: FontStyle.normal,
+                                  )),
+                            ),
+                            width: 135,
+                            height: 33,
+                            decoration: new BoxDecoration(
+                              color: Color(0xffffeeee),
+                              borderRadius: BorderRadius.circular(25),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Color(0x3f000000),
+                                    offset: Offset(0, 4),
+                                    blurRadius: 5,
+                                    spreadRadius: 0)
+                              ],
+                            )),
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
@@ -148,3 +178,6 @@ class ProfileTab extends StatelessWidget {
         ),
       );
 }
+
+void goToLoginScreen(context) => Navigator.of(context).pushReplacement(
+    MaterialPageRoute(builder: (_) => const LoginTabBarController()));
