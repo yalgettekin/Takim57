@@ -21,6 +21,7 @@ const kBoardScreenText = "Pano";
 const kSurveyHistoryText = "Anket Geçmişi";
 const kProfileText = "Profil";
 
+// Signin and Signup
 const kSignInText = "Giriş yap";
 const kSignUpText = "Kayıt ol";
 const kEmailText = "E-mail";
@@ -33,3 +34,6 @@ const kSignUpWithGoogleText = "Google ile Kayıt Ol";
 const kWelcomeText = "Hoşgeldin";
 const kExitText = "Çıkış";
 const kEntryText = "Ana Sayfaya Git";
+
+// Profile
+const kUnknown = "Bilinmiyor";
