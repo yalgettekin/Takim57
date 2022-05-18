@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class BoardTab extends StatefulWidget {
@@ -54,8 +55,9 @@ class _BoardTabState extends State<BoardTab> {
                           ),
                           tileColor: Colors.black87,
                           trailing: Wrap(
-                            children: const <Widget>[
-                              Icon(Icons.verified, color: Colors.blue),
+                            children:  <Widget>[
+                              FirebaseAuth.instance.currentUser !=null?
+                              Icon(Icons.verified, color: Colors.blue): SizedBox(),
                             ],
                           ),
                         ),
