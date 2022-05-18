@@ -36,22 +36,36 @@ class _GoogleLoginButtonState extends State<GoogleLoginButton> {
               children: [
                 const Text(kWelcomeText, style: kSignInWelcomeTextStyle),
                 const SizedBox(height: 10),
-                CircleAvatar(
-                  backgroundImage:
-                      NetworkImage(snapshot.data!.photoURL.toString()),
+                Visibility(
+                  visible: snapshot.data!.photoURL != null ? true : false,
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage:
+                            NetworkImage(snapshot.data!.photoURL.toString()),
+                      ),
+                      const SizedBox(height: 10)
+                    ],
+                  ),
                 ),
-                const SizedBox(height: 10),
-                Text(
-                  snapshot.data!.displayName.toString(),
-                  style: kSignInWelcomeTextStyle,
+                Visibility(
+                  visible: snapshot.data!.displayName != null ? true : false,
+                  child: Column(
+                    children: [
+                      Text(
+                        snapshot.data!.displayName.toString(),
+                        style: kSignInWelcomeTextStyle,
+                      ),
+                      const SizedBox(height: 10),
+                    ],
+                  ),
                 ),
-                const SizedBox(height: 10),
                 GestureDetector(
                   onTap: () {
                     goToHomeScreen(context);
                   },
                   child: const Text(
-                    'Ana Sayfaya Git',
+                    kEntryText,
                     style: kSignInHomeScreenTextStyle,
                   ),
                 ),
@@ -62,7 +76,7 @@ class _GoogleLoginButtonState extends State<GoogleLoginButton> {
                     await FirebaseAuth.instance.signOut();
                   },
                   child: const Text(
-                    'Çıkış',
+                    kExitText,
                     style: kSignOutTextStyle,
                   ),
                 ),

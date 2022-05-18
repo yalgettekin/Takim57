@@ -31,3 +31,5 @@ const kContinueWithoutSignUpText = "Kayıt olmadan devam et";
 const kSignInWithGoogleText = "Google ile Giriş Yap";
 const kSignUpWithGoogleText = "Google ile Kayıt Ol";
 const kWelcomeText = "Hoşgeldin";
+const kExitText = "Çıkış";
+const kEntryText = "Ana Sayfaya Git";
