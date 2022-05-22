@@ -1,4 +1,3 @@
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -30,10 +29,24 @@ class _SurveyPopupState extends State<SurveyPopup> {
     this.aciklama = aciklamaDegeri;
   }
 
+ shareSurvey(){
+    DocumentReference documentReference = FirebaseFirestore.instance.collection("Surveys").doc(kategori);
+    Map<String, String> Surveys= {
+          "kategori": kategori,
+          "anketLinki": anketLinki,
+          "anketAdi": anketAdi,
+          "aciklama": aciklama
+    };
+    documentReference.set(Surveys).whenComplete(() => null);
+
+
+
+ }
 
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Anket Paylaşın!",
@@ -138,9 +151,7 @@ class _SurveyPopupState extends State<SurveyPopup> {
       ),
     );
   }
-  void shareSurvey() {
 
-  }
 }
 void goToHomeScreen(context) => Navigator.of(context).pushReplacement(
     MaterialPageRoute(builder: (_) => const BottomNavigationController()));
