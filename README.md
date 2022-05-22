@@ -112,5 +112,41 @@ Daily Scrum toplantıları saatlerinde aksaklıklar yaşandığı için herkesin
 
 
 
+**Sprint_2**
+
+**Sprint Notları:** 
+Sprint Planning 08.05.2022 tarihinde takım üyelerinin tamamının katılımı ile gerçekleşmiş olup aşağıdaki kararlar alınmıştır. 
+
+**Sprint içinde tamamlanması tahmin edilen puan:** 52 Puan
+
+**Puan tamamlama mantığı:**
+Toplamda proje boyunca tamamlanması gereken 151 puanlık backlog bulunmaktadır. İlk sprintte tamamlanması beklenen puan 35 iken tamamlana puan 23 olmuştur. Sprint-2 boyunca 52 puan tamamlanması hedeflenmektedir. 
+
+**Backlog düzeni ve Story seçimleri:**
+
+Sprint Planning toplantısında takım üyelerinin sprint için ayırabilecekleri zamanlar belirlenmiş ve buna göre görev dağılımı gerçekleşmiştir. Görev dağılımları ve kişi başı çalışma saatlerine ASANA’ da ve Daily Scrum Notlarında detaylı olarak yer verilmiştir. 
+ASANA’da Product backlog item'lara tıklandığında hikayeler, puanları, zaman maliyetleri, atanan kişiler, hangi sprintte yapılması gerektiği bilgileri yer almakta. 
+
+**Daily Scrum:** 
+Daily Scrum toplantılarının Google Meet üzerinden saat 21:00’de yapılması kararlaştırılmıştır. Meet toplantıları gerçekleştirmekte aksaklık yaşandığı durumlarda Slack ve Whatsapp üzerinden iletişim kurma kararı alındı. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır.
+**Sprint 2 Daily Scrum Chats:** https://docs.google.com/document/d/1aDCvjaDKxn870KN2D_6JelGDz2MTVOEu0uY38o5AOM0/edit?usp=sharing
+
+
+**Sprint-2 Backlog:**
+![Sprint_2__Backlog](https://user-images.githubusercontent.com/104317144/169700172-f443ee3e-cf2b-486e-9924-5235c7c02e48.png)
+
+**Ürün Durumu Ekran Görüntüleri:**
+![kayıt_ol](https://user-images.githubusercontent.com/104317144/169700282-cafaf240-37ba-4a33-9d72-335b14d6d359.png)
+![giris_yap](https://user-images.githubusercontent.com/104317144/169700290-8175d7f6-90e8-49dd-9099-335aa369c3b2.png)
+![profil](https://user-images.githubusercontent.com/104317144/169700297-04ad1470-3a8d-473a-9837-ff1e1e96e2c7.png)
+![anket_paylas](https://user-images.githubusercontent.com/104317144/169700300-bdb30ac0-309a-4830-a48b-ca669a40060b.png)
+
+**Sprint Review:**
+
+
+**Sprint Retrospective:**
+
+
+
 
 
