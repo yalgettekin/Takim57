@@ -130,7 +130,9 @@ ASANA’da Product backlog item'lara tıklandığında hikayeler, puanları, zam
 ## Daily Scrum:
 Daily Scrum toplantılarının Google Meet üzerinden saat 21:00’de yapılması kararlaştırılmıştır. Meet toplantıları gerçekleştirmekte aksaklık yaşandığı durumlarda Slack ve Whatsapp üzerinden iletişim kurma kararı alındı. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır.
 **Sprint 2 Daily Scrum Chats:** https://docs.google.com/document/d/1aDCvjaDKxn870KN2D_6JelGDz2MTVOEu0uY38o5AOM0/edit?usp=sharing
+## Product Backlog URL
 
+ASANA https://app.asana.com/0/1202171107125904/board
 
 ## Sprint-2 Backlog:
 ![Sprint_2__Backlog](https://user-images.githubusercontent.com/104317144/169700172-f443ee3e-cf2b-486e-9924-5235c7c02e48.png)
