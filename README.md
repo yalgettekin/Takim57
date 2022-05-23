@@ -145,9 +145,27 @@ ASANA https://app.asana.com/0/1202171107125904/board
 
 ## Sprint Review:
 
+Sprint Planning’ te belirlenen hedeflerden Login Screen, profil ekranı(leaderboard) tamamlandı ve  anket ekleme taskı kısmen oluşturuldu. 
+
+Firebase den anket verilerini getirme, Puanlama ekleme- Kullanıcı eğer login ise kullanıcı isminin yanına verified kullanıcı olduğunu belirten bir icon ekleme görevleri tamamlanmadı. 
+
+Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Sprint içinde tamamlanması tahmin edilen 52 puandan 28’ i tammalanmıştır. 
+## Sprint Review katılımcıları: Uğur Ulaş GÖKTAŞ, Naile YALGETTEKİN, Yusuf TÜRKAY 
+
 
 ## Sprint Retrospective:
 
+Sprint başında belirlenen sprint boyunca kişi başı çalışma saatlerine uygun olarak bir ilerleme gerçekleşmedi. Belirlenen saat sürelerinin altında çalışma gerçekleşti,
+
+Kritik görevler dikkate alınmadığı için birbirine bağlı tasklar tamamlanmadı. Örneğin anket ekleme zamanında oluşturulmadığı için anket silme görevi tamamlanamadı,
+
+Takım üyelerinin olağandışı programlarından ötürü ortaya çıkan aksaklıklara yönelik önceden plan yapılmadığı için tamamlanmayan tasklar oluştu,
+
+Birbirini bloklayan çok fazla görev  olduğu için tamamlanmayan görevler başka görevlerin de tamamlanmasını engellemiş oldu,
+
+Daily Scrum Toplantıları çoğunlukla 3 kişi ile gerçekleşti,
+
+Süreç boyunca tamamlanması gereken toplam 151 story pointin şimdiye kadar 51’i tamamlandı bu durum son sprinte çok fazla görev kalmasına neden oldu.
 
 
 
