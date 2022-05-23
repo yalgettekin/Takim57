@@ -141,7 +141,7 @@ ASANA https://app.asana.com/0/1202171107125904/board
 ![kayıt_ol](https://user-images.githubusercontent.com/104317144/169700282-cafaf240-37ba-4a33-9d72-335b14d6d359.png)
 ![giris_yap](https://user-images.githubusercontent.com/104317144/169700290-8175d7f6-90e8-49dd-9099-335aa369c3b2.png)
 ![profil](https://user-images.githubusercontent.com/104317144/169700297-04ad1470-3a8d-473a-9837-ff1e1e96e2c7.png)
-![pano](https://user-images.githubusercontent.com/104317144/169844934-1239294d-bf2f-44e2-82f9-f51b568cd9e2.png)
+
 ![anket_paylas](https://user-images.githubusercontent.com/104317144/169700300-bdb30ac0-309a-4830-a48b-ca669a40060b.png)
 
 ## Sprint Review:
@@ -150,7 +150,7 @@ Sprint Planning’ te belirlenen hedeflerden Login Screen, profil ekranı(leader
 
 Firebase den anket verilerini getirme, Puanlama ekleme- Kullanıcı eğer login ise kullanıcı isminin yanına verified kullanıcı olduğunu belirten bir icon ekleme görevleri tamamlanmadı. 
 
-Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Sprint içinde tamamlanması tahmin edilen 52 puandan 35’ i tammalanmıştır. 
+Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Sprint içinde tamamlanması tahmin edilen 52 puandan 32’ si tammalanmıştır. 
 **Sprint Review katılımcıları:** Uğur Ulaş GÖKTAŞ, Naile YALGETTEKİN, Yusuf TÜRKAY 
 
 
@@ -166,7 +166,7 @@ Birbirini bloklayan çok fazla görev  olduğu için tamamlanmayan görevler ba�
 
 Daily Scrum Toplantıları çoğunlukla 3 kişi ile gerçekleşti,
 
-Süreç boyunca tamamlanması gereken toplam 151 story pointin şimdiye kadar 51’i tamamlandı bu durum son sprinte çok fazla görev kalmasına neden oldu.
+Süreç boyunca tamamlanması gereken toplam 151 story pointin şimdiye kadar 55’i tamamlandı bu durum son sprinte çok fazla görev kalmasına neden oldu.
 
 
 
