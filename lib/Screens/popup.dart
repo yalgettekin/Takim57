@@ -11,31 +11,31 @@ class SurveyPopup extends StatefulWidget {
 }
 
 class _SurveyPopupState extends State<SurveyPopup> {
-  late String kategori, anketLinki, anketAdi, aciklama;
+  late String category, link, name, description;
 
-  kategoriAl(kategoriDegeri) {
-    this.kategori = kategoriDegeri;
+  categoryAl(categoryDegeri) {
+    this.category = categoryDegeri;
   }
 
-  anketLinkiAl(anketLinkiDegeri) {
-    this.anketLinki = anketLinkiDegeri;
+  linkAl(linkDegeri) {
+    this.link = linkDegeri;
   }
 
-  anketAdiAl(anketAdiDegeri) {
-    this.anketAdi = anketAdiDegeri;
+  nameAl(nameDegeri) {
+    this.name = nameDegeri;
   }
 
-  aciklamaAl(aciklamaDegeri) {
-    this.aciklama = aciklamaDegeri;
+  descriptionAl(descriptionDegeri) {
+    this.description = descriptionDegeri;
   }
 
  shareSurvey(){
-    DocumentReference documentReference = FirebaseFirestore.instance.collection("Surveys").doc(kategori);
-    Map<String, String> Surveys= {
-          "kategori": kategori,
-          "anketLinki": anketLinki,
-          "anketAdi": anketAdi,
-          "aciklama": aciklama
+    DocumentReference documentReference = FirebaseFirestore.instance.collection("Surveys").doc(category);
+    Map<String, dynamic> Surveys= {
+          "category": category,
+          "link": link,
+          "name": name,
+          "description": description
     };
     documentReference.set(Surveys).whenComplete(() => null);
 
@@ -69,8 +69,8 @@ class _SurveyPopupState extends State<SurveyPopup> {
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
 
-                onChanged: (String kategoriDegeri){
-                  kategoriAl(kategoriDegeri);
+                onChanged: (String categoryDegeri){
+                  categoryAl(categoryDegeri);
                 },
                 decoration: const InputDecoration(
                     labelText: "KATEGORİ SEÇİN",
@@ -84,8 +84,8 @@ class _SurveyPopupState extends State<SurveyPopup> {
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
 
-                onChanged: (String anketLinkiDegeri){
-                  anketLinkiAl(anketLinkiDegeri);
+                onChanged: (String linkDegeri){
+                  linkAl(linkDegeri);
                 },
                 decoration: const InputDecoration(
                     labelText: "Anket Linki",
@@ -99,8 +99,8 @@ class _SurveyPopupState extends State<SurveyPopup> {
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
 
-                onChanged: (String anketAdiDegeri){
-                  anketAdiAl(anketAdiDegeri);
+                onChanged: (String nameDegeri){
+                  nameAl(nameDegeri);
                 },
                 decoration: const InputDecoration(
                     labelText: "Anket Adı",
@@ -114,8 +114,8 @@ class _SurveyPopupState extends State<SurveyPopup> {
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
 
-                onChanged: (String aciklamaDegeri){
-                  aciklamaAl(aciklamaDegeri);
+                onChanged: (String descriptionDegeri){
+                  descriptionAl(descriptionDegeri);
                 },
                 decoration: const InputDecoration(
                     labelText: "Anket Açıklaması",
