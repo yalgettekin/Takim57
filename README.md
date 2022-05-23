@@ -149,8 +149,8 @@ Sprint Planning’ te belirlenen hedeflerden Login Screen, profil ekranı(leader
 
 Firebase den anket verilerini getirme, Puanlama ekleme- Kullanıcı eğer login ise kullanıcı isminin yanına verified kullanıcı olduğunu belirten bir icon ekleme görevleri tamamlanmadı. 
 
-Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Sprint içinde tamamlanması tahmin edilen 52 puandan 28’ i tammalanmıştır. 
-## Sprint Review katılımcıları: Uğur Ulaş GÖKTAŞ, Naile YALGETTEKİN, Yusuf TÜRKAY 
+Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Sprint içinde tamamlanması tahmin edilen 52 puandan 35’ i tammalanmıştır. 
+**Sprint Review katılımcıları:** Uğur Ulaş GÖKTAŞ, Naile YALGETTEKİN, Yusuf TÜRKAY 
 
 
 ## Sprint Retrospective:
