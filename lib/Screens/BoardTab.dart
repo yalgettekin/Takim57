@@ -13,7 +13,7 @@ class BoardTab extends StatefulWidget {
 
 class _BoardTabState extends State<BoardTab> {
   late String kategori, anketLinki, anketAdi, aciklama;
-  FirebaseFirestoreService _firebaseFirestoreService =
+  final FirebaseFirestoreService _firebaseFirestoreService =
       FirebaseFirestoreService();
 
   @override
@@ -59,13 +59,13 @@ class _BoardTabState extends State<BoardTab> {
                                 ListTile(
                                   title: Text(
                                     "${survey['name']}",
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.white,
                                     ),
                                   ),
-                                  subtitle: const Text(
-                                    "@kullanıcıadı",
-                                    style: TextStyle(
+                                  subtitle: Text(
+                                    "${survey['username']}",
+                                    style: const TextStyle(
                                       color: Colors.white,
                                     ),
                                   ),
@@ -73,7 +73,7 @@ class _BoardTabState extends State<BoardTab> {
                                   trailing: Wrap(
                                     children: <Widget>[
                                       FirebaseAuth.instance.currentUser != null
-                                          ? Icon(Icons.verified,
+                                          ? const Icon(Icons.verified,
                                               color: Colors.blue)
                                           : SizedBox(),
                                     ],
@@ -88,9 +88,9 @@ class _BoardTabState extends State<BoardTab> {
                                   child: Align(
                                     alignment: Alignment.topRight,
                                     child: Container(
-                                      child:  Text(
+                                      child: Text(
                                         "# ${survey['category']}",
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             fontSize: 11.0,
                                             color: Colors.white),
                                       ),
@@ -107,13 +107,13 @@ class _BoardTabState extends State<BoardTab> {
                                       right: 15.0, top: 3.0, bottom: 15.0),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
-                                    children: const <Widget>[
-                                      Icon(
+                                    children: <Widget>[
+                                      const Icon(
                                         Icons.monetization_on,
                                         color: Colors.amber,
                                         size: 24.0,
                                       ),
-                                      Text("30 Puan")
+                                      Text(" ${survey['score']} Puan")
                                     ],
                                   ),
                                 ),
