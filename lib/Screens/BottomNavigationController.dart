@@ -5,7 +5,6 @@ import '../Constants/StringConstant.dart';
 import '../Screens/OnboardingScreen.dart';
 import 'ProfileTab.dart';
 import 'BoardTab.dart';
-import 'SurveyHistoryTab.dart';
 import 'package:hive/hive.dart';
 
 class BottomNavigationController extends StatefulWidget {
@@ -21,7 +20,6 @@ class _BottomNavigationControllerState
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     BoardTab(),
-    SurveyHistoryTab(),
     ProfileTab()
   ];
 
@@ -47,10 +45,6 @@ class _BottomNavigationControllerState
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
                   label: kBoardScreenText,
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.history),
-                  label: kSurveyHistoryText,
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.people),
