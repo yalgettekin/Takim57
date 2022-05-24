@@ -5,6 +5,9 @@ import 'package:flutter_application_1/Screens/popup.dart';
 import 'package:flutter_application_1/Services/FirebaseFirestoreServices.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../Constants/StringConstant.dart';
+import '../Constants/TextStyleConstant.dart';
+
 class BoardTab extends StatefulWidget {
   const BoardTab({Key? key}) : super(key: key);
 
@@ -16,7 +19,6 @@ class _BoardTabState extends State<BoardTab> {
   late String kategori, anketLinki, anketAdi, aciklama;
   final FirebaseFirestoreService _firebaseFirestoreService =
       FirebaseFirestoreService();
-  var url = Uri.parse('https://example.com');
 
   @override
   Widget build(BuildContext context) => SafeArea(
@@ -24,13 +26,8 @@ class _BoardTabState extends State<BoardTab> {
           child: Scaffold(
             appBar: AppBar(
               backgroundColor: const Color(0xffc4c4c4),
-              title: const Text(
-                'Anasayfa',
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontFamily: "SourceSansPro",
-                    fontStyle: FontStyle.normal,
-                    fontSize: 32.0),
+              title: const Text(kOnboardingHomeScreenText,
+                style: kAppBarTextStyle,
               ),
               centerTitle: true,
             ),
@@ -60,17 +57,11 @@ class _BoardTabState extends State<BoardTab> {
                             child: Column(
                               children: [
                                 ListTile(
-                                  title: Text(
-                                    "${survey['name']}",
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                    ),
-                                  ),
+                                  title: Text("${survey['name']}",
+                                      style: kBoardTabListTileTextStyle),
                                   subtitle: Text(
                                     "${survey['username']}",
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                    ),
+                                    style: kBoardTabListTileTextStyle,
                                   ),
                                   tileColor: Colors.black87,
                                   trailing: Wrap(
@@ -93,12 +84,8 @@ class _BoardTabState extends State<BoardTab> {
                                   child: Align(
                                     alignment: Alignment.topRight,
                                     child: Container(
-                                      child: Text(
-                                        "# ${survey['category']}",
-                                        style: const TextStyle(
-                                            fontSize: 11.0,
-                                            color: Colors.white),
-                                      ),
+                                      child: Text("# ${survey['category']}",
+                                          style: kBoardTabCategoryTextStyle),
                                       padding: EdgeInsets.all(8.0),
                                       decoration: BoxDecoration(
                                         color: Colors.grey,
@@ -114,20 +101,171 @@ class _BoardTabState extends State<BoardTab> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
-                                      ElevatedButton(
-                                        onPressed: () async {
-                                          if (!await launchUrl(
-                                              Uri.parse(survey['link']))) {
-                                            throw 'Could not launch ${survey['link']}';
-                                          }
-                                        },
-                                        child: Text('Ankete Git'),
-                                        style: ButtonStyle(
-                                          backgroundColor:
-                                              MaterialStateProperty.all(
-                                                  const Color.fromRGBO(
-                                                      254, 91, 95, 1)),
-                                        ),
+                                      Row(
+                                        children: [
+                                          ElevatedButton(
+                                            onPressed: () async {
+                                              if (!await launchUrl(
+                                                  Uri.parse(survey['link']))) {
+                                                throw 'Could not launch ${survey['link']}';
+                                              }
+                                            },
+                                            child: const Text(kGoToSurveyText),
+                                            style: ButtonStyle(
+                                              backgroundColor:
+                                                  MaterialStateProperty.all(
+                                                      const Color.fromRGBO(
+                                                          254, 91, 95, 1)),
+                                            ),
+                                          ),
+                                          ElevatedButton(
+                                            onPressed: () {
+                                              showDialog(
+                                                  context: context,
+                                                  builder:
+                                                      (BuildContext context) {
+                                                    return AlertDialog(
+                                                      scrollable: true,
+                                                      title: Text(
+                                                          "${survey['name']}"),
+                                                      content: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(1.0),
+                                                        child: Form(
+                                                          child: Column(
+                                                            children: <Widget>[
+                                                              Text(
+                                                                  "${survey['description']}"),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        right:
+                                                                            10.0),
+                                                                child: Align(
+                                                                  alignment:
+                                                                      Alignment
+                                                                          .bottomRight,
+                                                                  child:
+                                                                      Container(
+                                                                    child: Text(
+                                                                        "# ${survey['category']}",
+                                                                        style:
+                                                                            kBoardTabCategoryTextStyle),
+                                                                    padding:
+                                                                        const EdgeInsets.all(
+                                                                            8.0),
+                                                                    decoration:
+                                                                        BoxDecoration(
+                                                                      color: Colors
+                                                                          .grey,
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              30),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              const Padding(
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .all(
+                                                                            10.0),
+                                                              ),
+                                                              Container(
+                                                                decoration:
+                                                                    const BoxDecoration(
+                                                                  borderRadius: BorderRadius.only(
+                                                                      bottomRight:
+                                                                          Radius.circular(
+                                                                              10),
+                                                                      bottomLeft:
+                                                                          Radius.circular(
+                                                                              10)),
+                                                                  color: Color
+                                                                      .fromRGBO(
+                                                                          152,
+                                                                          203,
+                                                                          79,
+                                                                          1),
+                                                                ),
+                                                                child: Column(
+                                                                  children: [
+                                                                    const Padding(
+                                                                      padding:
+                                                                          EdgeInsets.all(
+                                                                              5.0),
+                                                                    ),
+                                                                    Row(
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .center,
+                                                                      children: [
+                                                                        const Icon(
+                                                                          Icons
+                                                                              .monetization_on,
+                                                                          color:
+                                                                              Colors.amber,
+                                                                          size:
+                                                                              24.0,
+                                                                        ),
+                                                                        Text(
+                                                                            kPreviewScreenScore +
+                                                                                "${survey['score']}",
+                                                                            style:
+                                                                                kBoardTabSurveyScoreTextStyle),
+                                                                      ],
+                                                                    ),
+                                                                    ElevatedButton(
+                                                                      onPressed:
+                                                                          () async {
+                                                                        if (!await launchUrl(
+                                                                            Uri.parse(survey['link']))) {
+                                                                          throw 'Could not launch ${survey['link']}';
+                                                                        }
+                                                                      },
+                                                                      child: const Text(
+                                                                          kGoToSurveyText,
+                                                                          style:
+                                                                              kBoardTabButtonTextStyle),
+                                                                      style:
+                                                                          ButtonStyle(
+                                                                        backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(
+                                                                            196,
+                                                                            196,
+                                                                            196,
+                                                                            1)),
+                                                                      ),
+                                                                    ),
+                                                                    const Padding(
+                                                                      padding:
+                                                                          EdgeInsets.all(
+                                                                              5.0),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    );
+                                                  });
+                                            },
+                                            child: const Icon(
+                                              Icons.visibility,
+                                              color: Colors.white,
+                                              size: 24.0,
+                                            ),
+                                            style: ButtonStyle(
+                                              backgroundColor:
+                                                  MaterialStateProperty.all(
+                                                      const Color.fromRGBO(
+                                                          254, 185, 187, 1)),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                       Row(
                                         children: [
@@ -136,7 +274,7 @@ class _BoardTabState extends State<BoardTab> {
                                             color: Colors.amber,
                                             size: 24.0,
                                           ),
-                                          Text(" ${survey['score']} Puan"),
+                                          Text(" ${survey['score']} "+kScoreText),
                                         ],
                                       ),
                                     ],

@@ -37,3 +37,7 @@ const kEntryText = "Ana Sayfaya Git";
 
 // Profile
 const kUnknown = "Bilinmiyor";
+
+const kGoToSurveyText = "Ankete Git";
+const kScoreText = "Puan";
+const kPreviewScreenScore = "Kazanılacak Puan: ";

@@ -15,3 +15,34 @@ const TextStyle kSignInHomeScreenTextStyle =
     TextStyle(color: Colors.blue, fontSize: 20.0, fontWeight: FontWeight.w700);
 const TextStyle kSignOutTextStyle =
     TextStyle(color: Colors.red, fontSize: 20.0, fontWeight: FontWeight.w700);
+
+const TextStyle kAppBarTextStyle = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontFamily: "SourceSansPro",
+    fontStyle: FontStyle.normal,
+    fontSize: 32.0);
+
+const TextStyle kBoardTabListTileTextStyle = TextStyle(color: Colors.white);
+
+const TextStyle kBoardTabCategoryTextStyle =
+    TextStyle(fontSize: 12.0, color: Colors.white);
+
+const TextStyle kBoardTabSurveyNameTextStyle = TextStyle(
+    color: Colors.black,
+    fontSize: 16.0,
+    fontWeight: FontWeight.w400,
+    fontFamily: "SourceSansPro",
+    fontStyle: FontStyle.normal);
+
+const TextStyle kBoardTabButtonTextStyle = TextStyle(
+    color: Colors.black,
+    fontSize: 16.0,
+    fontWeight: FontWeight.w400,
+    fontFamily: "SourceSansPro",
+    fontStyle: FontStyle.normal);
+
+const TextStyle kBoardTabSurveyScoreTextStyle = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontFamily: "SourceSansPro",
+    fontStyle: FontStyle.normal,
+    fontSize: 14.0);
