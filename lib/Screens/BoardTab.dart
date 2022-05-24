@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screens/popup.dart';
 import 'package:flutter_application_1/Services/FirebaseFirestoreServices.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BoardTab extends StatefulWidget {
   const BoardTab({Key? key}) : super(key: key);
@@ -15,21 +16,23 @@ class _BoardTabState extends State<BoardTab> {
   late String kategori, anketLinki, anketAdi, aciklama;
   final FirebaseFirestoreService _firebaseFirestoreService =
       FirebaseFirestoreService();
+  var url = Uri.parse('https://example.com');
 
   @override
   Widget build(BuildContext context) => SafeArea(
         child: Container(
           child: Scaffold(
             appBar: AppBar(
-              title: Text('Anket Panosu'),
-              actions: [
-                IconButton(
-                  icon: const Icon(
-                    Icons.search,
-                  ),
-                  onPressed: () {},
-                ),
-              ],
+              backgroundColor: const Color(0xffc4c4c4),
+              title: const Text(
+                'Anasayfa',
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontFamily: "SourceSansPro",
+                    fontStyle: FontStyle.normal,
+                    fontSize: 32.0),
+              ),
+              centerTitle: true,
             ),
             floatingActionButton: FloatingActionButton(
               child: Icon(Icons.add),
@@ -46,7 +49,7 @@ class _BoardTabState extends State<BoardTab> {
               stream: _firebaseFirestoreService.getSurvey(),
               builder: (context, snaphot) {
                 return !snaphot.hasData
-                    ? const CircularProgressIndicator()
+                    ? const Center(child: CircularProgressIndicator())
                     : ListView.builder(
                         itemCount: snaphot.data!.docs.length,
                         itemBuilder: (context, index) {
@@ -81,7 +84,9 @@ class _BoardTabState extends State<BoardTab> {
                                 ),
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("${survey['description']}"),
+                                  child: Text(survey['description'].length > 150
+                                      ? "${survey['description'].substring(0, 150)}..."
+                                      : survey['description']),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 10.0),
@@ -104,16 +109,36 @@ class _BoardTabState extends State<BoardTab> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      right: 15.0, top: 3.0, bottom: 15.0),
+                                      right: 15, left: 15, bottom: 10),
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
-                                      const Icon(
-                                        Icons.monetization_on,
-                                        color: Colors.amber,
-                                        size: 24.0,
+                                      ElevatedButton(
+                                        onPressed: () async {
+                                          if (!await launchUrl(
+                                              Uri.parse(survey['link']))) {
+                                            throw 'Could not launch ${survey['link']}';
+                                          }
+                                        },
+                                        child: Text('Ankete Git'),
+                                        style: ButtonStyle(
+                                          backgroundColor:
+                                              MaterialStateProperty.all(
+                                                  const Color.fromRGBO(
+                                                      254, 91, 95, 1)),
+                                        ),
                                       ),
-                                      Text(" ${survey['score']} Puan")
+                                      Row(
+                                        children: [
+                                          const Icon(
+                                            Icons.monetization_on,
+                                            color: Colors.amber,
+                                            size: 24.0,
+                                          ),
+                                          Text(" ${survey['score']} Puan"),
+                                        ],
+                                      ),
                                     ],
                                   ),
                                 ),
