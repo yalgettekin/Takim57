@@ -70,7 +70,7 @@ class _ProfileTabState extends State<ProfileTab> {
                         Padding(
                           padding: const EdgeInsets.only(left: 80),
                           child: Image.asset(
-                              'assets/Star-Clipart-PNG_nvsofi 7.png'),
+                              'assets/score.png'),
                         ),
                         // 3000
                         Padding(

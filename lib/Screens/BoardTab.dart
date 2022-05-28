@@ -202,14 +202,8 @@ class _BoardTabState extends State<BoardTab> {
                                                                           MainAxisAlignment
                                                                               .center,
                                                                       children: [
-                                                                        const Icon(
-                                                                          Icons
-                                                                              .monetization_on,
-                                                                          color:
-                                                                              Colors.amber,
-                                                                          size:
-                                                                              24.0,
-                                                                        ),
+                                                                        Image.asset(
+                                                                            'assets/score.png'),
                                                                         Text(
                                                                             kPreviewScreenScore +
                                                                                 "${survey['score']}",
@@ -269,11 +263,8 @@ class _BoardTabState extends State<BoardTab> {
                                       ),
                                       Row(
                                         children: [
-                                          const Icon(
-                                            Icons.monetization_on,
-                                            color: Colors.amber,
-                                            size: 24.0,
-                                          ),
+                                          Image.asset(
+                                              'assets/score.png'),
                                           Text(" ${survey['score']} "+kScoreText),
                                         ],
                                       ),
