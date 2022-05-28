@@ -46,3 +46,10 @@ const TextStyle kBoardTabSurveyScoreTextStyle = TextStyle(
     fontFamily: "SourceSansPro",
     fontStyle: FontStyle.normal,
     fontSize: 14.0);
+
+const kCategoryFilterTextStyle = TextStyle(
+    color: Colors.black,
+    fontWeight: FontWeight.w400,
+    fontFamily: "SourceSansPro",
+    fontStyle: FontStyle.normal,
+    fontSize: 14.0);
