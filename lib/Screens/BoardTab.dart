@@ -67,7 +67,7 @@ class _BoardTabState extends State<BoardTab> {
                       ),
                       SizedBox(
                         child: CupertinoButton(
-                            onPressed: (){},
+                            onPressed: () {},
                             child: const Text("Kategorileri Filtrele",
                                 style: kCategoryFilterTextStyle),
                             color: Color.fromRGBO(255, 238, 238, 1)),
@@ -302,5 +302,4 @@ class _BoardTabState extends State<BoardTab> {
           ),
         ),
       ));
-
 }
