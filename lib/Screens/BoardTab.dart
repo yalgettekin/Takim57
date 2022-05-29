@@ -16,6 +16,7 @@ class BoardTab extends StatefulWidget {
 }
 
 class _BoardTabState extends State<BoardTab> {
+  
   late String kategori, anketLinki, anketAdi, aciklama;
   final FirebaseFirestoreService _firebaseFirestoreService =
       FirebaseFirestoreService();
@@ -278,6 +279,58 @@ class _BoardTabState extends State<BoardTab> {
                                                                   1)),
                                                     ),
                                                   ),
+                                                  ElevatedButton(
+                                                      style: ButtonStyle(
+                                                          backgroundColor:
+                                                              MaterialStateProperty
+                                                                  .all(Colors
+                                                                      .green)),
+                                                      onPressed: () {
+                                                        showDialog(
+                                                            context: context,
+                                                            builder:
+                                                                (BuildContext
+                                                                    context) {
+                                                              return AlertDialog(
+                                                                title: Text(
+                                                                    'Silmek İstediğine Emin misin?'),
+                                                                content: Row(
+                                                                  children: [
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          left:
+                                                                              45.0),
+                                                                      child: ElevatedButton(
+                                                                          style: ButtonStyle(
+                                                                              backgroundColor: MaterialStateProperty.all(Colors
+                                                                                  .red)),
+                                                                          onPressed:
+                                                                              () {},
+                                                                          child:
+                                                                              Text('Evet')),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          left:
+                                                                              60),
+                                                                      child: ElevatedButton(
+                                                                          style: ButtonStyle(
+                                                                              backgroundColor: MaterialStateProperty.all(Colors
+                                                                                  .grey)),
+                                                                          onPressed: () => Navigator.pop(
+                                                                              context),
+                                                                          child:
+                                                                              Text('Hayır')),
+                                                                    )
+                                                                  ],
+                                                                ),
+                                                              );
+                                                            });
+                                                      },
+                                                      child: Icon(Icons
+                                                          .delete_forever_sharp))
                                                 ],
                                               ),
                                               Row(
