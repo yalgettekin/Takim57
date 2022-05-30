@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -16,7 +17,6 @@ class BoardTab extends StatefulWidget {
 }
 
 class _BoardTabState extends State<BoardTab> {
-  
   late String kategori, anketLinki, anketAdi, aciklama;
   final FirebaseFirestoreService _firebaseFirestoreService =
       FirebaseFirestoreService();
@@ -285,14 +285,14 @@ class _BoardTabState extends State<BoardTab> {
                                                               MaterialStateProperty
                                                                   .all(Colors
                                                                       .green)),
-                                                      onPressed: () {
-                                                        showDialog(
+                                                      onPressed: () async {
+                                                        await showDialog(
                                                             context: context,
                                                             builder:
                                                                 (BuildContext
                                                                     context) {
                                                               return AlertDialog(
-                                                                title: Text(
+                                                                title: const Text(
                                                                     'Silmek İstediğine Emin misin?'),
                                                                 content: Row(
                                                                   children: [
@@ -302,13 +302,12 @@ class _BoardTabState extends State<BoardTab> {
                                                                           left:
                                                                               45.0),
                                                                       child: ElevatedButton(
-                                                                          style: ButtonStyle(
-                                                                              backgroundColor: MaterialStateProperty.all(Colors
-                                                                                  .red)),
-                                                                          onPressed:
-                                                                              () {},
-                                                                          child:
-                                                                              Text('Evet')),
+                                                                          style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.red)),
+                                                                          onPressed: () async {
+                                                                            await _firebaseFirestoreService.deleteSurvey(survey.id).then((value) =>
+                                                                                Navigator.pop(context));
+                                                                          },
+                                                                          child: const Text('Evet')),
                                                                     ),
                                                                     Padding(
                                                                       padding: const EdgeInsets
@@ -322,7 +321,7 @@ class _BoardTabState extends State<BoardTab> {
                                                                           onPressed: () => Navigator.pop(
                                                                               context),
                                                                           child:
-                                                                              Text('Hayır')),
+                                                                              const Text('Hayır')),
                                                                     )
                                                                   ],
                                                                 ),
