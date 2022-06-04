@@ -12,42 +12,37 @@ class SurveyPopup extends StatefulWidget {
 }
 
 class _SurveyPopupState extends State<SurveyPopup> {
-  late String kategori, anketLinki, anketAdi, aciklama;
-  late int anketSuresi;
+  late String category, link, name, description;
 
-  kategoriAl(kategoriDegeri) {
-    this.kategori = kategoriDegeri;
+  categoryAl(categoryDegeri) {
+    this.category = categoryDegeri;
   }
 
-  anketLinkiAl(anketLinkiDegeri) {
-    this.anketLinki = anketLinkiDegeri;
+  linkAl(linkiDegeri) {
+    this.link = linkiDegeri;
   }
 
-  anketAdiAl(anketAdiDegeri) {
-    this.anketAdi = anketAdiDegeri;
+  nameAl(nameDegeri) {
+    this.name = nameDegeri;
   }
 
-  aciklamaAl(aciklamaDegeri) {
-    this.aciklama = aciklamaDegeri;
-  }
-
-  anketSuresiAl(anketSuresiDegeri) {
-    this.anketSuresi = int.parse(anketSuresiDegeri);
+  descriptionAl(descriptionDegeri) {
+    this.description = descriptionDegeri;
   }
 
   shareSurvey() {
-    DocumentReference documentReference =
-        FirebaseFirestore.instance.collection("Surveys").doc(kategori);
-    Map<String, dynamic> Surveys = {
-      "kategori": kategori,
-      "anketLinki": anketLinki,
-      "anketAdi": anketAdi,
-      "aciklama": aciklama,
-      "anketSuresi": anketSuresi,
-    };
-    documentReference.set(Surveys).whenComplete(() => null);
-  }
 
+      DocumentReference documentReference =
+      FirebaseFirestore.instance.collection("Surveyss").doc(category);
+      Map<String, dynamic> Surveys = {
+        "category": category,
+        "link": link,
+        "name": name,
+        "description": description,
+
+      };
+      documentReference.set(Surveys).whenComplete(() => null);
+  }
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -74,39 +69,35 @@ class _SurveyPopupState extends State<SurveyPopup> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(
-                          left: 25.0, right: 25.0, top: 8.0, bottom: 2.0),
-                      child: SizedBox(
-                        height: 30,
-                        width: 220,
-                        child: TextFormField(
-                          onChanged: (String kategoriDegeri) {
-                            kategoriAl(kategoriDegeri);
-                          },
-                          decoration: const InputDecoration(
-                            contentPadding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 10.0),
-                            filled: true,
-                            fillColor: Colors.white,
-                            labelText: "Kategori Seçin",
-                            focusColor: Colors.white,
-                            labelStyle: TextStyle(
-                              fontSize: 12,
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                                borderSide:
-                                BorderSide(color: Colors.grey, width: 2)),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white),
-                              borderRadius: const BorderRadius.all(
-                                const Radius.circular(10.0),
+                        padding: const EdgeInsets.only(
+                            left: 25.0, right: 25.0, top: 2.0, bottom: 2.0),
+                        child: SizedBox(
+                          height: 30,
+                          width: 220,
+                          child: TextFormField(
+                            onChanged: (String categoryDegeri) {
+                              categoryAl(categoryDegeri);
+                            },
+                            decoration: const InputDecoration(
+                              contentPadding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 10.0),
+                              filled: true,
+                              fillColor: Colors.white,
+                              labelText: "Kategori Seçin",
+                              labelStyle: TextStyle(
+                                fontSize: 12,
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide:
+                                  BorderSide(color: Colors.grey, width: 2)),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.white),
+                                borderRadius: const BorderRadius.all(
+                                  const Radius.circular(10.0),
+                                ),
                               ),
                             ),
                           ),
-                          maxLines: 4,
-                          cursorHeight: 2,
-                          minLines: 1,
-                        ),
-                      )
+                        )
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
@@ -115,8 +106,8 @@ class _SurveyPopupState extends State<SurveyPopup> {
                         height: 30,
                         width: 220,
                         child: TextFormField(
-                          onChanged: (String anketLinkiDegeri) {
-                            anketLinkiAl(anketLinkiDegeri);
+                          onChanged: (String linkDegeri) {
+                            linkAl(linkDegeri);
                           },
                           decoration: const InputDecoration(
                             contentPadding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 10.0),
@@ -146,8 +137,8 @@ class _SurveyPopupState extends State<SurveyPopup> {
                         height: 30,
                         width: 220,
                         child: TextFormField(
-                          onChanged: (String anketAdiDegeri) {
-                            anketAdiAl(anketAdiDegeri);
+                          onChanged: (String nameDegeri) {
+                            nameAl(nameDegeri);
                           },
                           decoration: const InputDecoration(
                             contentPadding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 10.0),
@@ -177,8 +168,8 @@ class _SurveyPopupState extends State<SurveyPopup> {
                         height: 30,
                         width: 220,
                         child: TextFormField(
-                          onChanged: (String aciklamaDegeri) {
-                            aciklamaAl(aciklamaDegeri);
+                          onChanged: (String descriptionDegeri) {
+                            descriptionAl(descriptionDegeri);
                           },
                           decoration: const InputDecoration(
                             contentPadding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 5.0),
@@ -202,84 +193,6 @@ class _SurveyPopupState extends State<SurveyPopup> {
                         ),
                       )
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          left: 25.0, right: 40, top: 8.0, bottom: 2.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: const [
-                          Text("Anket Süresi"),
-                          SizedBox(
-                            width: 45,
-                            height: 20,
-                            child: TextField(
-
-                              style: TextStyle(
-                                fontSize: 12,
-                                height: 2),
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.white,
-                                labelText: "minute",
-                                contentPadding:
-                                EdgeInsets.only(
-                                    left: 25.0, right: 25.0, top: 2.0, bottom: 2.0),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide:
-                                  BorderSide(color: Colors.grey, width: 2),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white),
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(3.0),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            width: 45,
-                            height: 20,
-                            child: TextField(
-
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  height: 2),
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.white,
-                                labelText: "minute",
-                                contentPadding:
-                                EdgeInsets.only(
-                                    left: 25.0, right: 25.0, top: 2.0, bottom: 2.0),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide:
-                                  BorderSide(color: Colors.grey, width: 2),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white),
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(3.0),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          )
-
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          left: 25.0, right: 25.0, top: 10.0, bottom: 2.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("anket degeri:"),
-                        ],
-                      ),
-                    ),
-
                     Padding(
                       padding: const EdgeInsets.only(
                           left: 25.0, right: 25.0, top: 40.0, bottom: 2.0),
