@@ -39,7 +39,7 @@ class _SurveyPopupState extends State<SurveyPopup> {
 
   shareSurvey() {
     DocumentReference documentReference =
-        FirebaseFirestore.instance.collection("Surveyss").doc(category);
+        FirebaseFirestore.instance.collection("Surveys").doc(category);
     Map<String, dynamic> Surveys = {
       "category": category,
       "link": link,
