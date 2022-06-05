@@ -169,5 +169,37 @@ Daily Scrum Toplantıları çoğunlukla 3 kişi ile gerçekleşti,
 Süreç boyunca tamamlanması gereken toplam 151 story pointin şimdiye kadar 55’i tamamlandı bu durum son sprinte çok fazla görev kalmasına neden oldu.
 
 
+# Sprint_3
+
+## Sprint Notları: 
+ Sprint Planning 23.05.2022 tarihinde takım üyelerinin tamamının katılımı ile gerçekleşmiş olup aşağıdaki kararlar alınmıştır. 
+ 
+**Sprint içinde tamamlanması tahmin edilen puan:** 60 puan
+
+## Puan tamamlama mantığı: 
+Başlangıçta toplamda proje boyunca tamamlanması gereken 151 puanlık backlog oluşturulmuştur. Ancak üçüncü sprint planlamasında ortak alınan karar ile backlog revize edilmiş olup askıya alınan(ertelenenler) ve iptal edilen görevler belirlenmiştir. Yapılan revize sonucunda 36 puan eksilerek 115 puanlık bir backlog listesi oluşmuştur.  İlk sprintte tamamlanması beklenen puan 35 iken tamamlanan puan 23 olmuştur. Sprint-2 boyunca 52 puan tamamlanması hedeflenmiş olup toplam 32 puan tamamlanmıştır. İki sprint boyunca toplamda 55 puan tamamlanmıştır. İptal edilen ve ertelenen görevlerin toplam puanı 36 olmak üzere 3. sprintte tamamlanması hedeflenen puan 60’ tır. 
+
+## Backlog düzeni ve Story seçimleri:
+
+Sprint Planning toplantısında takım üyelerinin sprint için ayırabilecekleri zamanlar belirlenmiş ve buna göre görev dağılımı gerçekleşmiştir. Görev dağılımları ve kişi başı çalışma saatlerine ASANA’ da, Google e-tablolar ve Daily Scrum Notlarında detaylı olarak yer verilmiştir. 
+ASANA’da Product backlog item'lara tıklandığında hikayeler, puanları, zaman maliyetleri, atanan kişiler, hangi sprintte yapılması gerektiği bilgileri yer almaktadır.
+Ayrıca Product Backlog bilgileri Google E-Tablolarda detaylı olarak açıklanmıştır.  
+
+## Daily Scrum: 
+Daily Scrum toplantılarının Google Meet üzerinden saat 21:00’de yapılması kararlaştırılmıştır. Meet toplantıları gerçekleştirmekte aksaklık yaşandığı durumlarda Slack ve Whatsapp üzerinden iletişim kurma kararı alındı. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır.
+**Sprint 2 Daily Scrum Chats:** https://docs.google.com/document/d/1FKOxhRY0DeM5aVFWrmjuMfPc8pAQA5K3Nl6AwsyhM74/edit?usp=sharing
+
+## Product Backlog URL
+
+ASANA https://app.asana.com/0/1202171107125904/board
+  
+Google E-Tablolar- https://docs.google.com/spreadsheets/d/1d6ZFMm_cjp45rDGlhCXtkUMovtTGvbkCu6dgM90VfKM/edit?usp=sharing
+
+## Sprint-3 Backlog:
+
+![sprint_3_backlog_1](https://user-images.githubusercontent.com/104317144/172042754-9fb79c18-78d0-40f1-8b7c-5c08934aefdc.png)
+
+![sprint_3_backlog_2](https://user-images.githubusercontent.com/104317144/172042438-d4437537-9264-4e80-9fff-3a35534178b2.png)
+
 
 
