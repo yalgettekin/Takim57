@@ -53,12 +53,18 @@ class _SurveyPopupState extends State<SurveyPopup> {
       ),
       actions: [],
       content: Padding(
-        padding: const EdgeInsets.only(top: 150),
+        padding: const EdgeInsets.all(10),
         child: Form(
           child: Column(
             children: <Widget>[
+              Image.asset(
+                'assets/popup.png',
+                height: 150,
+                width: 150,
+                alignment: Alignment.center
+              ),
               Container(
-                height: 300,
+                height: 280,
                 width: 900,
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -70,7 +76,7 @@ class _SurveyPopupState extends State<SurveyPopup> {
                   children: [
                     Padding(
                         padding: const EdgeInsets.only(
-                            left: 25.0, right: 25.0, top: 2.0, bottom: 2.0),
+                            left: 25.0, right: 25.0, top: 20.0, bottom: 8.0),
                         child: SizedBox(
                           height: 30,
                           width: 220,
@@ -101,7 +107,7 @@ class _SurveyPopupState extends State<SurveyPopup> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
-                          left: 25.0, right: 25.0, top: 2.0, bottom: 2.0),
+                          left: 25.0, right: 25.0, top: 2.0, bottom: 8.0),
                       child: SizedBox(
                         height: 30,
                         width: 220,
@@ -132,7 +138,7 @@ class _SurveyPopupState extends State<SurveyPopup> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
-                          left: 25.0, right: 25.0, top: 2.0, bottom: 2.0),
+                          left: 25.0, right: 25.0, top: 2.0, bottom: 8.0),
                       child: SizedBox(
                         height: 30,
                         width: 220,
@@ -163,7 +169,7 @@ class _SurveyPopupState extends State<SurveyPopup> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
-                          left: 25.0, right: 25.0, top: 2.0, bottom: 2.0),
+                          left: 25.0, right: 25.0, top: 2.0, bottom: .0),
                       child: SizedBox(
                         height: 30,
                         width: 220,
