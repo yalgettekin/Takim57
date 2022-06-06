@@ -203,6 +203,11 @@ Google E-Tablolar- https://docs.google.com/spreadsheets/d/1d6ZFMm_cjp45rDGlhCXtk
 
 ## Ürün Durumu Ekran Görüntüleri:
 
+![anketPanosu](https://user-images.githubusercontent.com/104317144/172109027-c6bae7de-2b27-45d8-a3b1-c6b00971b3d7.png)
+
+![popup](https://user-images.githubusercontent.com/104317144/172109067-88ad6380-ac38-460d-b9c6-91cb3ad17e30.png)
+
+
 ## Sprint Review:
 
 Sprint Planning’ te belirlenen hedeflerden anket ekleme,  kullanıcının profil bilgilerini getirme, firebase entegrasyon, anket önizlemesinde olacak olan ankete git butonunu anket panosuna al,  anket önizleme sayfası ve anket silme taskları tamamlandı.
