@@ -201,5 +201,26 @@ Google E-Tablolar- https://docs.google.com/spreadsheets/d/1d6ZFMm_cjp45rDGlhCXtk
 
 ![sprint_3_backlog_2](https://user-images.githubusercontent.com/104317144/172042438-d4437537-9264-4e80-9fff-3a35534178b2.png)
 
+## Ürün Durumu Ekran Görüntüleri:
 
+## Sprint Review:
 
+Sprint Planning’ te belirlenen hedeflerden anket ekleme,  kullanıcının profil bilgilerini getirme, firebase entegrasyon, anket önizlemesinde olacak olan ankete git butonunu anket panosuna al,  anket önizleme sayfası ve anket silme taskları tamamlandı.
+
+Puanlama ekleme, Kullanıcı eğer login ise kullanıcı isminin yanına verified kullanıcı olduğunu belirten bir icon ekleme, anket önizlemesinde olacak olan süre sayacını anket panosuna alma ve kullanıcının bulunduğu sıralama firebaseden kontrol edip getirilmesi görevleri tamamlanamadı. 
+
+Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Sprint içinde tamamlanması tahmin edilen 60 puandan 40'ı tammalanmıştır
+
+**Sprint Review katılımcıları:** Uğur Ulaş GÖKTAŞ, Naile YALGETTEKİN, Yusuf TÜRKAY, Seray SAN, Fatma Betül SOFUOĞLU 
+
+## Sprint Retrospective:
+
+Sprint başında belirlenen sprint boyunca kişi başı çalışma saatlerine uygun olarak bir ilerleme gerçekleşmedi. Belirlenen saat sürelerinin altında çalışma gerçekleşti.
+
+Kritik görevler dikkate alınmadığı için birbirine bağlı tasklar tamamlanmadı. Örneğin puanlama ekleme oluşturulmadığı için kullanıcının bulunduğu sıralama firebaseden kontrol edip getirilecek görevi tamamlanmadı, bu nedenle lider tablosu işlevi yerine getirilemedi.    
+
+Birbirini bloklayan çok fazla görev  olduğu için tamamlanmayan görevler başka görevlerin de tamamlanmasını engellemiş oldu.
+
+Süreç boyunca tamamlanması gereken toplam 151 story point son sprintte yapılan revizeler sonucunda 115 point olmuştur. Sprint-3’ te tamamlanması planlanan 60 puanın 40’ı tamamlanmıştır. Sonuç olarak 3 sprint sonunda toplamda tamamlanan puan sayısı 91 olmuştur. 
+
+Tüm sürecin değerlendirmesi yapıldığında takım olarak görevlendirmelerde ve taskların önceliklendirilmesinde iyi ve gerçekçi bir planlama yapamadığımız, Backlog oluşturmada fazla zaman harcadığımız ve takım üyelerinin belirledikleri çalışma saatlerinin altında performans gösterdiği için üründe hedeflediğimiz sonuca ulaşamamış olduk.
