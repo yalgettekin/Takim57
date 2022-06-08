@@ -187,7 +187,7 @@ Ayrıca Product Backlog bilgileri Google E-Tablolarda detaylı olarak açıklanm
 
 ## Daily Scrum: 
 Daily Scrum toplantılarının Google Meet üzerinden saat 21:00’de yapılması kararlaştırılmıştır. Meet toplantıları gerçekleştirmekte aksaklık yaşandığı durumlarda Slack ve Whatsapp üzerinden iletişim kurma kararı alındı. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır.
-**Sprint 2 Daily Scrum Chats:** https://docs.google.com/document/d/1FKOxhRY0DeM5aVFWrmjuMfPc8pAQA5K3Nl6AwsyhM74/edit?usp=sharing
+**Sprint 3 Daily Scrum Chats:** https://docs.google.com/document/d/1eMqKUYWUFqLf_rxyja6Sqe8guZwI_RgV99OQ4CgSLTs/edit?usp=sharing
 
 ## Product Backlog URL
 
